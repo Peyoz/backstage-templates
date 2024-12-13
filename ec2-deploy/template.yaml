@@ -86,7 +86,7 @@ spec:
       input:
         workflowId:  instance.yml # ID of GitHub action WorkFlow
         repoUrl: 'github.com?repo=aws-ec2&owner=Peyoz'
-        branchOrTagName: 'master'
+        branchOrTagName: 'main'
         workflowInputs:
           instanceName: ${{ parameters.InstanceName }}
           awsRegion: ${{ parameters.Region }}
