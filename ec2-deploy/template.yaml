@@ -88,11 +88,11 @@ spec:
           repo: ${{ parameters.repo }}
         copyWithoutTemplating:
         - .github/workflows/*.yml
-    # - id: fetch-base
-      # name: Fetching github actions from content folder
-      # action: fetch:plain
-      # input:
-        # url: ./actions  # Location of the content directory where github actions is found
+    - id: fetch-base
+      name: Fetching github actions from content folder
+      action: fetch:plain
+      input:
+        url: ./actions  # Location of the content directory where github actions is found
 
 # Publish the content of the current working directory to our github directory
     - id: publish
@@ -115,7 +115,7 @@ spec:
       action: github:actions:dispatch
       input:
         workflowId:  instance.yml # ID of GitHub action WorkFlow
-        repoUrl: github.com?owner=${{ parameters.owner }}/${{ parameters.repo }}
+        repoUrl: github.com?owner=${{ parameters.owner }}/&repo=${{ parameters.repo }}
         branchOrTagName: main
         workflowInputs:
           instanceName: ${{ parameters.InstanceName }}
