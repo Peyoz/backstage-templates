@@ -34,9 +34,9 @@ spec:
           type: string
           description: Type of the instance that you want to deploy, for eg:- t2.medium, t3.medium etc.
           enum:
-            - t2.medium
-            - t2.small
-            - t2.micro
+            - t3.nano
+            - t3.micro
+            - t3.small
             - t3.medium
         
         action:
