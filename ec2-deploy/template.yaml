@@ -84,7 +84,8 @@ spec:
         url: ./content  # Location of the content directory where catlog-info.yaml file is present for the template
         values:
           InstanceName: ${{ parameters.InstanceName}}
-          repoUrl: ${{ parameters.repoUrl }}
+          repoOwner: ${{ parameters.repoUrl | parseRepoUrl | repoUrl.owner }}
+          repo: ${{ parameters.repoUrl | parseRepoUrl | repoUrl.repo }}
         copyWithoutTemplating:
         - .github/workflows/*.yml
     - id: fetch-base
