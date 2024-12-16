@@ -105,11 +105,11 @@ spec:
         repoVisibility: public # or 'internal' or 'private'
         defaultBranch: main
         secrets:
-          AWS_ACCESS_KEY_ID: ${{ parameters.AWSAccessKey }}
-          AWS_SECRET_ACCESS_KEY: ${{ parameters.AWSSecretKey }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWSAccessKey }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSecretKey }}
         repoVariables:
-          AWS_ACCESS_KEY_ID: ${{ parameters.AWSAccessKey }}
-          AWS_SECRET_ACCESS_KEY: ${{ parameters.AWSSecretKey }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWSAccessKey }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSecretKey }}
 
 
 # Triggering CI-CD to create resource in our case github action. 
