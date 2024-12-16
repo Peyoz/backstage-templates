@@ -85,6 +85,8 @@ spec:
         values:
           InstanceName: ${{ parameters.InstanceName}}
           repoUrl: ${{ parameters.repoUrl }}
+        copyWithoutTemplating:
+        - .github/workflows/*.yml
 
 # Publish the content of the current working directory to our github directory
     - id: publish
