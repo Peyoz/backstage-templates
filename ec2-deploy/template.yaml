@@ -107,6 +107,9 @@ spec:
         secrets:
           AWS_ACCESS_KEY_ID: ${{ parameters.AWSAccessKey }}
           AWS_SECRET_ACCESS_KEY: ${{ parameters.AWSSecretKey }}
+        repoVariables:
+          AWS_ACCESS_KEY_ID: ${{ parameters.AWSAccessKey }}
+          AWS_SECRET_ACCESS_KEY: ${{ parameters.AWSSecretKey }}
 
 
 # Triggering CI-CD to create resource in our case github action. 
