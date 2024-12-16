@@ -68,11 +68,11 @@ spec:
         - owner
         - repo
       properties:
-        repo:
-          title: Target Repository Name
-          type: string
         owner:
           title: Github Owner
+          type: string
+        repo:
+          title: Target Repository Name
           type: string
 
   steps:
@@ -101,8 +101,7 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: This repo is to create an ec2 instance ${{ parameters.InstanceName }} using backstage.
-        repo: ${{ parameters.repo }}
-        owner: ${{ parameters.owner }}
+        repoUrl: github.com?owner=${{ parameters.owner }}&repo=${{ parameters.repo }}
         repoVisibility: public # or 'internal' or 'private'
         defaultBranch: main
         secrets:
