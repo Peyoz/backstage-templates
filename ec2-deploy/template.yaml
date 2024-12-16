@@ -16,7 +16,7 @@ spec:
          - InstanceType
       properties:
         InstanceName:
-          title: Instance Name.
+          title: Instance Name
           type: string
           description: Name of the Instnace to be created.
           ui:autofocus: true
@@ -30,7 +30,7 @@ spec:
           # ui:autofocus: true
 
         InstanceType:
-          title: Type of Instance.
+          title: Type of Instance
           type: string
           description: Type of the instance that you want to deploy, for eg:- t2.medium, t3.medium etc.
           enum:
