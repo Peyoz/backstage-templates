@@ -65,15 +65,15 @@ spec:
 
     - title: Choose a Repository Name
       required:
-        - repoUrl
+        - owner
+        - repo
       properties:
-        repoUrl:
-          title: Location of the repository
+        repo:
+          title: Target Repository Name
           type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
+        owner:
+          title: Github Owner
+          type: string
 
   steps:
 # Getting the all the files/details from the template
@@ -101,7 +101,8 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: This repo is to create an ec2 instance ${{ parameters.InstanceName }} using backstage.
-        repoUrl: ${{ parameters.repoUrl }}
+        repo: ${{ parameters.repo }}
+        owner: ${{ parameters.owner }}
         repoVisibility: public # or 'internal' or 'private'
         defaultBranch: main
         secrets:
