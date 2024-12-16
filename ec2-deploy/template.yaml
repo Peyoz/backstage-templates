@@ -87,6 +87,11 @@ spec:
           repoUrl: ${{ parameters.repoUrl }}
         copyWithoutTemplating:
         - .github/workflows/*.yml
+    - id: fetch-base
+      name: Fetching github actions from content folder
+      action: fetch:plain
+      input:
+        url: ./actions  # Location of the content directory where github actions is found
 
 # Publish the content of the current working directory to our github directory
     - id: publish
