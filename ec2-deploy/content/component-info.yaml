@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ values.name | dump }}
+  name: ${{ values.InstanceName | dump }}
   annotations:
-    github.com/project-slug: Peyoz/aws-ec2 #name of the terraform repo
+    github.com/project-slug: ${{ parameters.repoUrl }}
     backstage.io/techdocs-ref: dir:.
   title: 'Automation for instance deployment'
   description: An example of a Instance Creation.
