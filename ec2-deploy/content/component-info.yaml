@@ -3,9 +3,9 @@ kind: Component
 metadata:
   name: ${{ values.InstanceName | dump }}
   annotations:
-    github.com/project-slug: ${{ parameters.owner }}/${{ parameters.repo }}
+    github.com/project-slug: ${{ values.owner }}/${{ values.repo }}
     backstage.io/techdocs-ref: dir:.
-  title: ${{ parameters.InstanceName }} instance deployment
+  title: ${{ values.InstanceName }} instance deployment
   description: An example of a Instance Creation.
 spec:
   type: service
