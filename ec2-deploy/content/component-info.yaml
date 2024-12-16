@@ -5,7 +5,7 @@ metadata:
   annotations:
     github.com/project-slug: ${{ parameters.repoUrl }}
     backstage.io/techdocs-ref: dir:.
-  title: 'Automation for instance deployment'
+  title: ${{ parameters.repoUrl }} instance deployment
   description: An example of a Instance Creation.
 spec:
   type: service
