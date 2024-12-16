@@ -102,7 +102,7 @@ spec:
         description: This repo is to create an ec2 instance ${{ parameters.InstanceName }} using backstage.
         repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: public # or 'internal' or 'private'
-        # defaultBranch: master
+        defaultBranch: main
         secrets:
           AWS_ACCESS_KEY_ID: ${{ parameters.AWSAccessKey }}
           AWS_SECRET_ACCESS_KEY: ${{ parameters.AWSSecretKey }}
@@ -115,7 +115,7 @@ spec:
       input:
         workflowId:  instance.yml # ID of GitHub action WorkFlow
         repoUrl: ${{ parameters.repoUrl }}
-        branchOrTagName: 'master'
+        branchOrTagName: main
         workflowInputs:
           instanceName: ${{ parameters.InstanceName }}
           awsRegion: ${{ parameters.Region }}
