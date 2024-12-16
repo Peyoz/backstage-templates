@@ -15,7 +15,7 @@ provider "aws" {
   #secret_key = var.secret_key
 }
 
-resource "aws_instance" "example_server" {
+resource "aws_instance" "${{ values.InstanceName }}" {
   ami           = "ami-059dd856d3b78700d"
   instance_type = var.instanceType
 
